@@ -21,6 +21,13 @@
   text-align: center;
 }
 
+.divider > hr {
+  height: 1px;
+  margin: 0;
+  border: 0;
+  background: tint($color-med-gray, 75);
+}
+
 
 
 // Masthead

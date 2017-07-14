@@ -48,3 +48,16 @@ $em-base: 16px !default;
 
   @return ($pxval / $base) * 1rem;
 }
+
+
+
+// Tint and shade
+// --------------------------------------------------------------------------
+
+@function tint($color, $percentage) {
+  @return mix($color-white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix($color-black, $color, $percentage);
+}
