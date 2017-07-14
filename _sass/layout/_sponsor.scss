@@ -4,8 +4,11 @@
 
 
 .sponsor {
+  display: block;
   margin: rem(20) 0 rem(80);
+  color: $color-med-gray;
   text-align: center;
+  text-decoration: none;
 
   @include at-least(medium) {
     margin-bottom: rem(120);
