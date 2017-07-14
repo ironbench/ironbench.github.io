@@ -1,0 +1,121 @@
+// =========================================================================
+// PAGE
+// =========================================================================
+
+
+
+.page-head {
+  position: relative;
+}
+
+.page-head__cta .btn {
+  @include at-least(medium) {
+    display: none;
+  }
+}
+
+.section-title {
+  margin: 0 0 1em;
+  font-size: rem(36);
+  font-weight: 300;
+  text-align: center;
+}
+
+
+
+// Masthead
+// --------------------------------------------------------------------------
+
+.page-head--masthead {
+  @include font-smoothing;
+  background: $color-red;
+
+  @include at-least(medium) {
+    padding: rem(20) 0;
+  }
+}
+
+.page-head--masthead .page-head__cta {
+  margin: rem(100) 0;
+
+  @include at-least(medium) {
+    margin-bottom: rem(100);
+    text-align: center;
+  }
+
+  @include at-least(large) {
+    margin-bottom: rem(170);
+  }
+}
+
+.page-head--masthead .page-head__text {
+  margin: 0 0 1em;
+  color: $color-white;
+  font-size: rem(42);
+  font-weight: 300;
+  line-height: 1.125;
+
+  @include at-least(large) {
+    margin-top: rem(140);
+    font-size: rem(42);
+  }
+
+  @include at-least(xlarge) {
+    margin-top: rem(150);
+    font-size: rem(48);
+  }
+}
+
+.page-head--masthead .site-nav__logo {
+  fill: $color-white;
+}
+
+.page-head--masthead .site-nav__list {
+  display: none;
+
+  @include at-least(medium) {
+    display: block;
+  }
+}
+
+
+
+// Contact
+// --------------------------------------------------------------------------
+
+.contact {
+  padding: rem(80) 0;
+  background: $color-light-gray;
+}
+
+.contact .form-layout {
+  max-width: rem(500);
+  margin: 0 auto;
+}
+
+
+
+// Footer
+// --------------------------------------------------------------------------
+
+.page-footer {
+  @include at-least(medium) {
+    padding: rem(20) 0;
+  }
+
+  @include at-least(xlarge) {
+    padding: rem(40) rem(20);
+  }
+}
+
+.page-footer__meta {
+  color: $color-med-gray;
+  line-height: rem(40);
+}
+
+.page-footer__icon {
+  display: block;
+  width: rem(30);
+  float: right;
+  fill: $color-red;
+}

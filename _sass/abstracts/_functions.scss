@@ -1,0 +1,50 @@
+// =========================================================================
+// MIXINS
+// =========================================================================
+
+
+
+$em-base: 16px !default;
+
+
+
+// Strip units
+// --------------------------------------------------------------------------
+
+@function strip-units($value) {
+  @return ($value / ($value * 0 + 1));
+}
+
+
+
+// PX TO EM
+// --------------------------------------------------------------------------
+
+@function em($pxval, $base: $em-base) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+
+  @return ($pxval / $base) * 1em;
+}
+
+
+
+// PX TO REM
+// --------------------------------------------------------------------------
+
+@function rem($pxval) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+
+  $base: $em-base;
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+
+  @return ($pxval / $base) * 1rem;
+}

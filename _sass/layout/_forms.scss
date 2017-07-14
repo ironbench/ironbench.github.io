@@ -1,0 +1,64 @@
+// =========================================================================
+// FORMS
+// =========================================================================
+
+
+
+.form-layout {
+  @include clearfix;
+}
+
+.form-input {
+  margin-bottom: rem(25);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+
+// Labels
+// -------------------------------------------------------------------------
+
+.form-input > label {
+  display: block;
+  margin-bottom: rem(2);
+  color: $color-med-gray;
+  font-size: rem(14);
+  pointer-events: none;
+}
+
+
+
+// Inputs
+// -------------------------------------------------------------------------
+
+.form-layout .text-input,
+.form-layout textarea {
+  display: block;
+  width: 100%;
+  padding: 0 rem(10);
+  border: 0;
+  outline: none;
+  color: $color-gray;
+  font-size: rem(18);
+  font-weight: 500;
+  -webkit-appearance: none;
+}
+
+.form-input .text-input {
+  height: rem(40);
+}
+
+.form-input > textarea {
+  padding-top: 17px;
+  overflow: auto;
+}
+
+.form-input > button,
+.form-input > input[type="button"],
+.form-input > input[type="submit"] {
+  @include button($color-white, $color-dark-gray);
+  width: 100%;
+}

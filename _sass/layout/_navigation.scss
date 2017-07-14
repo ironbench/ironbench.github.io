@@ -1,0 +1,44 @@
+// =========================================================================
+// NAVIGATION
+// =========================================================================
+
+
+
+// Site nav
+// --------------------------------------------------------------------------
+
+.site-nav {
+  @include clearfix;
+}
+
+.site-nav__home-link {
+  display: block;
+  float: left;
+}
+
+.site-nav__logo {
+  display: block;
+  width: 100%;
+  max-width: rem(200);
+
+  @include at-least(large) {
+    max-width: rem(280);
+  }
+}
+
+.site-nav__list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  float: right;
+  list-style: none;
+}
+
+.site-nav__link {
+  display: block;
+  height: rem(46);
+  color: $color-white;
+  line-height: rem(46);
+  text-decoration: none;
+  text-transform: uppercase;
+}

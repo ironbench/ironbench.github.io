@@ -1,0 +1,81 @@
+// =========================================================================
+// MIXINS
+// =========================================================================
+
+
+
+// Breakpoints
+// --------------------------------------------------------------------------
+
+$bp-small: rem(650);
+$bp-medium: rem(715);
+$bp-large: rem(1000);
+$bp-xlarge: rem(1200);
+
+
+
+// Clearfix
+// -------------------------------------------------------------------------
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+
+
+// Breakpoints
+// --------------------------------------------------------------------------
+
+@mixin at-least($breakpoint) {
+  @if $breakpoint == 'small' {
+    @media (min-width: $bp-small) {
+      @content;
+    }
+  } @else if $breakpoint == 'medium' {
+    @media (min-width: $bp-medium) {
+      @content;
+    }
+  } @else if $breakpoint == 'large' {
+    @media (min-width: $bp-large) {
+      @content;
+    }
+  } @else if $breakpoint == 'xlarge' {
+    @media (min-width: $bp-xlarge) {
+      @content;
+    }
+  }
+}
+
+@mixin until($breakpoint) {
+  @if $breakpoint == 'small' {
+    @media (max-width: $bp-small) {
+      @content;
+    }
+  } @else if $breakpoint == 'medium' {
+    @media (max-width: $bp-medium) {
+      @content;
+    }
+  } @else if $breakpoint == 'large' {
+    @media (max-width: $bp-large) {
+      @content;
+    }
+  } @else if $breakpoint == 'xlarge' {
+    @media (max-width: $bp-xlarge) {
+      @content;
+    }
+  }
+}
+
+
+
+// Font smoothing
+// --------------------------------------------------------------------------
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

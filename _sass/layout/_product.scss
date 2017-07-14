@@ -1,0 +1,123 @@
+// =========================================================================
+// PRODUCT
+// =========================================================================
+
+
+
+.product {
+  padding: rem(40) 0;
+
+  @include at-least(medium) {
+    padding: rem(80) 0;
+  }
+}
+
+.product > .wrapper {
+  max-width: rem(1420);
+}
+
+.product > .product__callout {
+  max-width: rem(1500);
+}
+
+.product__logo {
+  display: block;
+  width: 100%;
+  max-width: rem(100);
+  fill: $color-red;
+
+  @include at-least(medium) {
+    max-width: rem(140);
+  }
+}
+
+
+
+// Description
+// -------------------------------------------------------------------------
+
+.product__desc {
+  margin-bottom: rem(60);
+
+  @include at-least(medium) {
+    max-width: rem(800);
+  }
+
+  @include at-least(xlarge) {
+    width: 40%;
+    float: left;
+  }
+}
+
+.product__desc h2 {
+  margin: 0 0 .5em;
+  font-size: rem(34);
+  font-weight: 400;
+
+  @include at-least(medium) {
+    font-size: rem(36);
+  }
+}
+
+.product__desc h3 {
+  margin: 0 0 1.125em;
+  font-size: rem(24);
+  font-weight: 400;
+
+  @include at-least(medium) {
+    font-size: rem(30);
+  }
+}
+
+.product__desc p {
+  font-size: rem(18);
+}
+
+
+
+// Description
+// -------------------------------------------------------------------------
+
+.product__info {
+  @include at-least(xlarge) {
+    width: 55%;
+    padding-top: rem(78);
+    float: right;
+  }
+}
+
+
+
+// Icon list
+// -------------------------------------------------------------------------
+
+.product__info .icon-list {
+  @include clearfix;
+  margin-bottom: rem(10);
+
+  @include at-least(small) {
+    max-width: rem(400);
+  }
+
+  @include at-least(medium) {
+    max-width: initial;
+    margin-bottom: rem(40);
+  }
+
+  @include at-least(large) {
+    margin-bottom: rem(40);
+  }
+}
+
+.product__info .icon-list__item {
+  @include at-least(medium) {
+    display: inline-block;
+    width: 47%;
+    margin-right: 2%;
+    vertical-align: top;
+  }
+}
+
+.product__info .icon-list__icon {
+  fill: $color-red;
+}

@@ -1,0 +1,22 @@
+<div class="form-layout">
+  <form action="https://formspree.io/{{ site.email }}" method="POST">
+    <input type="text" name="_gotcha" style="display:none" />
+    <input type="hidden" name="_subject" value="Ironbench Contact Form" />
+    <input type="hidden" name="_next" value="{{ site.url }}/thank-you.html" />
+    <div class="form-input">
+      <label for="name">Name</label>
+      <input class="text-input contact-form-input" id="name" type="text" name="name" required>
+    </div>
+    <div class="form-input">
+      <label for="email">Email</label>
+      <input class="text-input contact-form-input" id="email" type="email" name="email" required>
+    </div>
+    <div class="form-input">
+      <label for="phone">Phone (optional)</label>
+      <input class="text-input contact-form-input" id="phone" type="tel" name="phone">
+    </div>
+    <div class="form-input">
+      <input class="btn btn--wide" type="submit" value="Get in Touch">
+    </div>
+  </form>
+</div>

@@ -1,0 +1,39 @@
+// =========================================================================
+// PRODUCT
+// =========================================================================
+
+
+
+.callout {
+  @include font-smoothing;
+  @include clearfix;
+  padding: rem(20);
+  background: $color-dark-gray;
+  color: $color-white;
+  font-size: rem(24);
+
+  @include at-least(medium) {
+    padding: rem(30);
+  }
+
+  @include at-least(large) {
+    padding: rem(50);
+    font-size: rem(34);
+  }
+}
+
+.callout__icon {
+  display: block;
+  width: rem(46);
+  float: left;
+  fill: $color-white;
+}
+
+.callout__btn {
+  margin-top: rem(15);
+  float: right;
+}
+
+.callout > p {
+  margin: 0 0 1em;
+}

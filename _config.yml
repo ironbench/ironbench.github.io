@@ -1,0 +1,15 @@
+# Site settings
+title: IronBench
+email: info@ironbench.io
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://ironbench.github.io" # the base hostname & protocol for your site
+permalink: none
+
+# Build settings
+markdown: kramdown
+
+# Exclude from generated site
+exclude: ['Gemfile', 'Gemfile.lock', 'LICENSE', 'README.md']
+
+sass:
+  style: compressed

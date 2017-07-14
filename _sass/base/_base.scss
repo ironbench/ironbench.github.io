@@ -1,0 +1,32 @@
+// =========================================================================
+// BASE
+// =========================================================================
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  color: $color-dark-gray;
+  font-family: $base-font-family;
+  line-height: 1.4;
+}
+
+strong,
+em {
+  font-weight: 600;
+}
