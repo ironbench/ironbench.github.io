@@ -33,7 +33,7 @@
 // Masthead
 // --------------------------------------------------------------------------
 
-.page-head--masthead {
+.page-head {
   @include font-smoothing;
   background: $color-red;
 
@@ -73,11 +73,11 @@
   }
 }
 
-.page-head--masthead .site-nav__logo {
+.page-head .site-nav__logo {
   fill: $color-white;
 }
 
-.page-head--masthead .site-nav__list {
+.page-head .site-nav__list {
   display: none;
 
   @include at-least(medium) {
@@ -125,4 +125,8 @@
   width: rem(30);
   float: right;
   fill: $color-red;
+}
+
+.page-footer a {
+  color: $color-med-gray;
 }

@@ -1,0 +1,123 @@
+// =========================================================================
+// LEGAL
+// =========================================================================
+
+
+.legal {
+  width: 100%;
+  max-width: rem(1200);
+  padding-top: rem(25);
+
+  @include at-least(medium) {
+    padding-top: rem(50);
+  }
+}
+
+.legal .content {
+  @include at-least(large) {
+    width: 70%;
+    float: left;
+  }
+}
+
+.legal .summary {
+  @include at-least(large) {
+    width: 26%;
+    float: right;
+  }
+}
+
+.legal .section {
+  @include clearfix;
+  margin-bottom: rem(35);
+  padding-bottom: rem(35);
+  border-bottom: 1px solid $color-light-gray;
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: 0;
+  }
+}
+
+.legal .section :last-child {
+  margin-bottom: 0;
+}
+
+.legal .header {
+  margin: 0;
+  font-size: rem(36);
+  font-weight: 500;
+}
+
+.legal .subhead {
+  margin: 0;
+  font-weight: 400;
+}
+
+.legal .intro {
+  font-size: rem(18);
+}
+
+.legal .content h4 {
+  margin: 0 0 .75em;
+  color: $color-gray;
+  font-size: rem(27);
+  font-weight: 400;
+
+  @include at-least(medium) {
+    margin-left: -1em;
+  }
+}
+
+.legal .content h5 {
+  margin: 0 0 .5em;
+  font-size: rem(17);
+  font-weight: 600;
+}
+
+.legal .content p {
+  margin: 0 0 1em;
+}
+
+.legal a {
+  color: $color-blue;
+}
+
+.legal .content ul {
+  margin: 0 0 1em;
+  padding: 0 0 0 1em;
+
+  @include at-least(medium) {
+    padding: 0;
+  }
+}
+
+.legal .content ul > li {
+  margin-bottom: rem(5);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.summary {
+  margin-top: rem(20);
+
+  @include at-least(medium) {
+    margin-top: 0;
+  }
+}
+
+.summary h5 {
+  margin: 0;
+  color: $color-med-gray;
+  font-size: rem(14);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: rem(36);
+}
+
+.summary p {
+  margin: 0;
+}
