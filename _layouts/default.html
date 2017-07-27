@@ -3,7 +3,7 @@ layout: compress
 ---
 
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js wf-loading" lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -26,14 +26,6 @@ layout: compress
   </style>
 
   <link rel="stylesheet" type="text/css" href="/css/legal.css">
-
-  <script>
-    (function() {
-      if (sessionStorage.fonts) {
-        document.documentElement.classList.add('wf-active');
-      }
-    })();
-  </script>
 </head>
 <body>
   {% include svg.html %}
@@ -42,20 +34,13 @@ layout: compress
   </div>
   {% include page-footer.html %}
   <script>
-    WebFontConfig = {
-      typekit: { id: 'gur2vnw' },
-      timeout: 2000,
-      active: function() {
-        sessionStorage.fonts = true;
-        console.log('true');
-      }
-    };
-
     (function(d) {
-      var wf = d.createElement('script'), s = d.scripts[0];
-      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-      wf.async = true;
-      s.parentNode.insertBefore(wf, s);
+      var config = {
+        kitId: 'gur2vnw',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
     })(document);
   </script>
 </body>

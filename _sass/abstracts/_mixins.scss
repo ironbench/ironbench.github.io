@@ -7,6 +7,7 @@
 // Breakpoints
 // --------------------------------------------------------------------------
 
+$bp-xsmall: rem(374);
 $bp-small: rem(650);
 $bp-medium: rem(715);
 $bp-large: rem(1000);
@@ -31,7 +32,11 @@ $bp-xlarge: rem(1200);
 // --------------------------------------------------------------------------
 
 @mixin at-least($breakpoint) {
-  @if $breakpoint == 'small' {
+  @if $breakpoint == 'xsmall' {
+    @media (min-width: $bp-xsmall) {
+      @content;
+    }
+  } @if $breakpoint == 'small' {
     @media (min-width: $bp-small) {
       @content;
     }
@@ -51,7 +56,11 @@ $bp-xlarge: rem(1200);
 }
 
 @mixin until($breakpoint) {
-  @if $breakpoint == 'small' {
+  @if $breakpoint == 'xsmall' {
+    @media (max-width: $bp-xsmall) {
+      @content;
+    }
+  } @if $breakpoint == 'small' {
     @media (max-width: $bp-small) {
       @content;
     }

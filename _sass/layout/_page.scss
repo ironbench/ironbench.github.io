@@ -117,7 +117,10 @@
 
 .page-footer__meta {
   color: $color-med-gray;
-  line-height: rem(40);
+
+  @include at-least(small) {
+    line-height: rem(40);
+  }
 }
 
 .page-footer__icon {
@@ -125,8 +128,17 @@
   width: rem(30);
   float: right;
   fill: $color-red;
+
+  @include until(xsmall) {
+    display: none;
+  }
 }
 
 .page-footer a {
+  display: inline;
   color: $color-med-gray;
+
+  @include until(small) {
+    display: block;
+  }
 }
