@@ -13,3 +13,6 @@ exclude: ['Gemfile', 'Gemfile.lock', 'LICENSE', 'README.md']
 
 sass:
   style: compressed
+
+gems:
+  - jekyll-redirect-from
