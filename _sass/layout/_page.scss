@@ -4,10 +4,6 @@
 
 
 
-.page-head {
-  position: relative;
-}
-
 .page-head__cta .btn {
   @include at-least(medium) {
     display: none;
@@ -35,6 +31,7 @@
 
 .page-head {
   @include font-smoothing;
+  position: relative;
   background: $color-red;
 
   @include at-least(medium) {
