@@ -12,12 +12,13 @@
   }
 }
 
-.product > .wrapper {
-  max-width: rem(1420);
+.product__intro.wrapper {
+  max-width: rem(1400);
 }
 
 .product > .product__callout {
   max-width: rem(1500);
+  padding-top: 0;
 }
 
 .product__logo {
@@ -44,7 +45,7 @@
   }
 
   @include at-least(xlarge) {
-    width: 40%;
+    width: 45%;
     float: left;
   }
 }
@@ -80,7 +81,7 @@
 
 .product__info {
   @include at-least(xlarge) {
-    width: 55%;
+    width: 50%;
     padding-top: rem(78);
     float: right;
   }
@@ -88,6 +89,7 @@
 
 .product__info > h4 {
   margin: 0 0 1em;
+  color: $color-red;
   font-size: rem(18);
   font-weight: 600;
 }
@@ -101,12 +103,7 @@
   @include clearfix;
   margin-bottom: rem(10);
 
-  @include at-least(small) {
-    max-width: rem(400);
-  }
-
   @include at-least(medium) {
-    max-width: initial;
     margin-bottom: rem(40);
   }
 
@@ -126,4 +123,52 @@
 
 .product__info .icon-list__icon {
   fill: $color-red;
+}
+
+
+
+// Advantage
+// -------------------------------------------------------------------------
+
+.product > .product__advantage {
+  max-width: rem(1500);
+  padding-bottom: 0;
+}
+
+.product__advantage .advantage {
+  padding: rem(40) rem(20);
+  background: $color-light-gray;
+
+  @include at-least(medium) {
+    padding: rem(50);
+  }
+}
+
+.advantage > h4 {
+  margin: 0 0 1em;
+  font-size: rem(36);
+  font-weight: 400;
+  text-align: center;
+}
+
+.product__advantage .icon-list {
+  @include clearfix;
+}
+
+.product__advantage .icon-list__item {
+  @include at-least(medium) {
+    width: 50%;
+    padding-right: 2%;
+    float: left;
+    vertical-align: top;
+  }
+}
+
+.advantage .icon-list__item {
+  padding-left: rem(25);
+}
+
+.advantage .icon-list__icon {
+  width: rem(18);
+  height: rem(24);
 }

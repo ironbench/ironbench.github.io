@@ -7,7 +7,8 @@
 .callout {
   @include font-smoothing;
   @include clearfix;
-  padding: rem(20);
+  position: relative;
+  padding: rem(50) rem(20) rem(20);
   background: $color-dark-gray;
   color: $color-white;
   font-size: rem(24);
@@ -24,9 +25,13 @@
 
 .callout__icon {
   display: block;
+  position: absolute;
+  top: 0%;
+  left: 50%;
   width: rem(46);
-  float: left;
-  fill: $color-white;
+  margin-left: -(rem(23));
+  transform: translateY(-50%);
+  fill: $color-red;
 }
 
 .callout__btn {
@@ -35,5 +40,5 @@
 }
 
 .callout > p {
-  margin: 0 0 1em;
+  margin: 0;
 }
