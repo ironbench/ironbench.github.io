@@ -10,6 +10,10 @@
   }
 }
 
+.page-head__cta .btn + .btn {
+  margin-left: rem(10);
+}
+
 .section-title {
   margin: 0 0 1em;
   font-size: rem(36);

@@ -34,6 +34,11 @@
   list-style: none;
 }
 
+.site-nav__item {
+  margin-left: rem(30);
+  float: left;
+}
+
 .site-nav__link {
   display: block;
   height: rem(46);
