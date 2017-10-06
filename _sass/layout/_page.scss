@@ -168,11 +168,16 @@
 }
 
 .home-callout .icon {
-  display: inline-block;
+  display: block;
   width: rem(87.5);
   height: rem(56);
-  margin-right: rem(10);
+  margin: 0 auto rem(10);
   vertical-align: middle;
+
+  @include at-least(medium) {
+    display: inline-block;
+    margin-right: rem(10);
+  }
 }
 
 .home-callout__link {
