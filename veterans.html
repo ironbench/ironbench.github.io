@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<div class="page-head page-head--masthead">
+  <div class="wrapper">
+    {% include site-nav.html %}
+  </div>
+  <div class="wrapper wrapper--narrow">
+    <div class="page-head__cta page-head__cta--intro">
+      {% include flag.svg %}
+      <h2 class="page-head__subhead">Every day, ordinary people choose to actively, purposefully and extraordinarily serve this country, and the people in it. When these people choose to serve this country they know that such service may, and may already have, cost most or all of what they have to give. They even know that not everyone who benefits from their service will support their service—and yet they do it anyway. Thank you for your service. Thank you for your sacrifice. And thank you to the families of those have sacrificed as well.</h2>
+    </div>
+  </div>
+</div>
+<div class="page-body">
+  <div class="wrapper wrapper--narrow">
+    <div class="page-body__formatted">
+      {% capture veterans %}{% include content/veterans.md %}{% endcapture %}
+      {{ veterans | markdownify }}
+    </div>
+  </div>
+</div>
+<div class="contact" id="contact">
+  <div class="wrapper">
+    <h2 class="section-title">Let's Talk</h2>
+    <div class="form-layout">
+      <form action="https://formspree.io/{{ site.email }}" method="POST">
+        <input type="text" name="_gotcha" style="display:none" />
+        <input type="hidden" name="_subject" value="Ironbench Veteran Contact Form" />
+        <input type="hidden" name="_next" value="{{ site.url }}/thank-you.html" />
+        <div class="form-input">
+          <label for="name">Name</label>
+          <input class="text-input contact-form-input" id="name" type="text" name="name" required>
+        </div>
+        <div class="form-input">
+          <label for="email">Email</label>
+          <input class="text-input contact-form-input" id="email" type="email" name="email" required>
+        </div>
+        <div class="form-input">
+          <label for="phone">Phone (optional)</label>
+          <input class="text-input contact-form-input" id="phone" type="tel" name="phone">
+        </div>
+        <div class="form-input">
+          <input class="btn btn--wide" type="submit" value="Get in Touch">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

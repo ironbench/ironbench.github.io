@@ -56,6 +56,14 @@
   }
 }
 
+.page-head--masthead .page-head__cta--intro {
+  margin: rem(40) 0 rem(25);
+
+  @include at-least(medium) {
+    margin: rem(75) 0 rem(50);
+  }
+}
+
 .page-head--masthead .page-head__text {
   margin: 0 0 1em;
   color: $color-white;
@@ -74,6 +82,17 @@
   }
 }
 
+.page-head--masthead .page-head__subhead {
+  color: $color-white;
+  font-size: rem(21);
+  font-weight: 400;
+  text-align: left;
+
+  @include at-least(medium) {
+    font-size: rem(27);
+  }
+}
+
 .page-head .site-nav__logo {
   fill: $color-white;
 }
@@ -83,6 +102,39 @@
 
   @include at-least(medium) {
     display: block;
+  }
+}
+
+
+
+// Body
+// --------------------------------------------------------------------------
+
+.page-body__formatted {
+  padding: rem(25) 0;
+  font-size: rem(18);
+
+  @include at-least(medium) {
+    padding: rem(50) 0;
+    font-size: rem(21);
+  }
+}
+
+.page-body__formatted > ul {
+  @include clearfix;
+  margin: rem-calc(25 0);
+}
+
+.page-body__formatted > ul > li {
+  @include at-least(xlarge) {
+    width: 45%;
+    float: left;
+  }
+}
+
+.page-body__formatted > ul > li:nth-child(even) {
+  @include at-least(xlarge) {
+    margin-left: 10%;
   }
 }
 
@@ -99,6 +151,32 @@
 .contact .form-layout {
   max-width: rem(500);
   margin: 0 auto;
+}
+
+
+
+// Callout
+// -------------------------------------------------------------------------
+
+.home-callout {
+  padding: rem(40) 0;
+  background: $color-dark-gray;
+  color: $color-white;
+  font-size: rem(27);
+  line-height: normal;
+  text-align: center;
+}
+
+.home-callout .icon {
+  display: inline-block;
+  width: rem(87.5);
+  height: rem(56);
+  margin-right: rem(10);
+  vertical-align: middle;
+}
+
+.home-callout__link {
+  color: $color-white;
 }
 
 
@@ -136,10 +214,12 @@
 }
 
 .page-footer a {
-  display: inline;
+  display: inline-block;
+  margin-left: rem(10);
   color: $color-med-gray;
 
   @include until(small) {
     display: block;
+    margin: 0;
   }
 }

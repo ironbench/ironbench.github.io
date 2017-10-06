@@ -21,7 +21,7 @@
 
 
 .btn {
-  @include button($color-white, $color-red);
+  @include button($color-white, $color-blue);
   @include font-smoothing;
   display: inline-block;
   height: rem(40);

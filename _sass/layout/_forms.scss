@@ -59,6 +59,6 @@
 .form-input > button,
 .form-input > input[type="button"],
 .form-input > input[type="submit"] {
-  @include button($color-white, $color-dark-gray);
+  @include button($color-white, $color-red);
   width: 100%;
 }

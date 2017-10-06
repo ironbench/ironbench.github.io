@@ -14,3 +14,9 @@
     padding: rem(20) rem(40);
   }
 }
+
+.wrapper--narrow {
+  @include at-least(medium) {
+    max-width: rem(1200);
+  }
+}
