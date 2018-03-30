@@ -1,0 +1,62 @@
+// ==========================================================================
+// ENTERPRISE
+//
+// components/_enterprise.scss
+// ==========================================================================
+
+
+
+.enterprise.wrapper {
+  max-width: rem(1400);
+  margin-bottom: rem(75);
+}
+
+.enterprise > h3 {
+  font-size: rem(36);
+  font-weight: 600;
+  text-align: center;
+}
+
+.enterprise > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.enterprise ul > li {
+  display: block;
+  margin-bottom: rem(10);
+  font-size: rem(21);
+
+  @include at-least(large) {
+    text-align: center;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.enterprise li > .ui-icon {
+  width: rem(25);
+  height: rem(25);
+  margin-right: rem(5);
+  float: left;
+
+  @include at-least(large) {
+    display: inline-block;
+    margin-right: 0;
+    float: none;
+    vertical-align: middle;
+  }
+}
+
+.enterprise li > .desc {
+  display: block;
+  overflow: auto;
+
+  @include at-least(large) {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

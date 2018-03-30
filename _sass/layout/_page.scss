@@ -21,6 +21,24 @@
   text-align: center;
 }
 
+.section-subhead {
+  margin: 0 0 .5em;
+  font-size: rem(34);
+  font-weight: 400;
+  text-align: center;
+
+  @include at-least(medium) {
+    font-size: rem(36);
+  }
+}
+
+.header-footnote {
+  font-size: rem(21);
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+}
+
 .divider > hr {
   height: 1px;
   margin: 0;
