@@ -5,10 +5,14 @@
 
 .sponsor {
   display: block;
-  margin: rem(20) 0 rem(80);
+  margin: rem(10) 0;
   color: $color-med-gray;
   text-align: center;
   text-decoration: none;
+}
+
+.sponsor + .sponsor {
+  margin-bottom: rem(80);
 
   @include at-least(medium) {
     margin-bottom: rem(120);
@@ -16,6 +20,7 @@
 }
 
 .sponsor__img {
+  max-width: 100%;
   display: inline-block;
   margin: rem(10) 0 0;
 }
