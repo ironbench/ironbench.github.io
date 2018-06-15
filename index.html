@@ -54,6 +54,17 @@ layout: default
   </svg>
 </a>
 
+<a class="sponsor" href="https://devops.cioreview.com/vendor/2018/ironbench">
+  <figure>
+    <figcaption>Recognition</figcaption>
+    {% for image in site.static_files %}
+      {% if image.name == '2018-devops-trility.png' %}
+        <img class="sponsor__img" src="{{ image.path }}" alt="IronBench: Ready-to-Use Cloud Ecosystems with DevOps Behaviors">
+      {% endif %}
+    {% endfor %}
+  </figure>
+</a>
+
 <div class="contact" id="contact">
   <div class="wrapper">
     <h2 class="section-title">Contact Us</h2>
